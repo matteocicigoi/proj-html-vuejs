@@ -19,7 +19,10 @@ export default {
             </div>
             <Menu />
             <div class="profile-buttons">
-                <ButtonSm/>
+                <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="icon"/>
+                <ButtonSm :icon="'fa-brands fa-github'"/>
+                <ButtonSm :icon="'fa-brands fa-stack-overflow'"/>
+                <ButtonSm :icon="'fa-regular fa-user'"/>
             </div>
         </div>
     </header>
@@ -35,11 +38,16 @@ export default {
         align-items: center;
         height: 70px;
         padding: 17px 0;
+        font-size: 14px;
         .profile-buttons, .logo {
             width: 20%;
         }
         .profile-buttons {
-            background-color: blue;
+            .icon {
+                color: $textPrimary;
+                margin-right: 13px;
+                font-size: 15px;
+            }
         }
     }
 </style>

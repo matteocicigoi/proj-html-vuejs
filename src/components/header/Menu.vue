@@ -3,6 +3,7 @@ export default {}
 </script>
 
 <template>
+    <!-- Menu -->
     <ul>
         <li>home</li>
         <li class="dropdown selected">landing
@@ -15,6 +16,7 @@ export default {}
             <font-awesome-icon icon="fa-solid fa-chevron-down" class="icon" />
         </li>
     </ul>
+    <!-- Fine Menu -->
 </template>
 
 <style scoped lang="scss">
