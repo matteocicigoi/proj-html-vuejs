@@ -12,5 +12,6 @@ export default {
     img {
         display: block;
         height: 24px;
+        cursor: pointer;
     }
 </style>

@@ -15,10 +15,16 @@ export default {
         padding: 10px;
         border-radius: 7px;
         &.primary {
-            background-color: $btPrimary ;
+            background-color: $btPrimary;
             border: 1px solid $btBrPrimary;
             box-shadow: -1px 3px 4px 0px $btBrPrimary;
             margin: 0 4px;
+            color: $textInteraction;
+
+            &:hover{
+                background-color: $textInteraction;
+                color: $textHover;
+            }
         }
     }
 </style>

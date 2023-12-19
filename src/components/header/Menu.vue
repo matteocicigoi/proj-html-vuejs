@@ -48,6 +48,9 @@ export default {}
             &.selected {
                 color: $textInteraction;
             }
+            &:hover {
+                color: $textInteraction;
+            }
         }
     }
 </style>

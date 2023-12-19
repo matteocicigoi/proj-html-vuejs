@@ -30,6 +30,8 @@ export default {
 
 <style scoped lang="scss">
 @use '../../assets/style/partials/_variables.scss' as *;
+header {
+    background-color: $bgPrimary;
     .nav {
         max-width: $sizeContainer;
         margin: 0 auto;
@@ -47,7 +49,13 @@ export default {
                 color: $textPrimary;
                 margin-right: 13px;
                 font-size: 15px;
+                cursor: pointer;
+                
+                &:hover {
+                color: $textInteraction;
+            }
             }
         }
     }
+}
 </style>
