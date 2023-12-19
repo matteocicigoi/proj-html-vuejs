@@ -6,14 +6,25 @@ export default {}
     <!-- Menu -->
     <ul>
         <li>home</li>
-        <li class="dropdown selected">landing
-            <font-awesome-icon icon="fa-solid fa-chevron-down" class="icon" />
+        <li class="dropdown">
+            <select class="selected" name="landing" id="landing">
+            <option>landing</option>
+            <option>lorem</option>
+            </select>
         </li>
-        <li class="dropdown">pages
-            <font-awesome-icon icon="fa-solid fa-chevron-down" class="icon" />
+        <li class="dropdown">
+            <select name="pages" id="pages">
+            <option>pages</option>
+            <option>lorem</option>
+            <option>lorem</option>
+            </select>
         </li>
-        <li class="dropdown">docs
-            <font-awesome-icon icon="fa-solid fa-chevron-down" class="icon" />
+        <li class="dropdown">
+            <select name="docs" id="docs">
+            <option>docs</option>
+            <option>lorem</option>
+            <option>lorem</option>
+            </select>
         </li>
     </ul>
     <!-- Fine Menu -->
@@ -35,21 +46,24 @@ export default {}
             text-transform: uppercase;
             color: $textNav;
             font-size: 14px;
-            &.dropdown {
 
-                .icon {
-                    position: absolute;
-                    top: 50%;
-                    right: 0;
-                    font-size: 10px;
-                    transform: translate(-50%, -50%);
+            select {
+                text-transform: uppercase;
+                color: $textNav;
+                font-size: 14px;
+                font-weight: bold;
+                border: none;
+                background-color: $bgPrimary;
+                cursor: pointer;
+                &.selected {
+                    color: $textInteraction;
                 }
-            }
-            &.selected {
+                &:hover {
                 color: $textInteraction;
             }
-            &:hover {
-                color: $textInteraction;
+            }
+            &.dropdown {
+                padding-right: 0;
             }
         }
     }
