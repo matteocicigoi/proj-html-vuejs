@@ -20,9 +20,9 @@ export default {
             <Menu />
             <div class="profile-buttons">
                 <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="icon"/>
-                <ButtonSm :icon="'fa-brands fa-github'"/>
-                <ButtonSm :icon="'fa-brands fa-stack-overflow'"/>
-                <ButtonSm :icon="'fa-regular fa-user'"/>
+                <ButtonSm :class="'primary'" :icon="'fa-brands fa-github'"/>
+                <ButtonSm :class="'primary'" :icon="'fa-brands fa-stack-overflow'"/>
+                <ButtonSm :class="'primary'" :icon="'fa-regular fa-user'"/>
             </div>
         </div>
     </header>
@@ -45,6 +45,7 @@ header {
             width: 20%;
         }
         .profile-buttons {
+            text-align: end;
             .icon {
                 color: $textPrimary;
                 margin-right: 13px;

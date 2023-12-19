@@ -1,25 +1,28 @@
 <script>
-export default {
-    props : ['icon', 'class']
-}
+export default{
+    props : ['text']
+};
 </script>
 
 <template>
-    <button :class="class"><font-awesome-icon :icon="icon" /></button>
+<div class="primary">
+    <span>{{ text }}</span>
+</div>
 </template>
+
 <style scoped lang="scss">
 @use '../../assets/style/partials/_variables.scss' as *;
-    button {
-        all: unset;
-        cursor: pointer;
-        padding: 10px;
+    div {
+        padding: 4px 9px;
         border-radius: 7px;
+        width: max-content;
         &.primary {
             background-color: $btPrimary;
             border: 1px solid $btBrPrimary;
-            box-shadow: -1px 3px 4px 0px $btBrPrimary;
             margin: 0 4px;
+            border-radius: 20px;
             color: $textInteraction;
+            font-size: 13px;
 
             &:hover{
                 background-color: $textInteraction;
