@@ -12,7 +12,7 @@ export default {
         return {
             list : {
                 icon : 'fa-brands fa-github',
-                text : ['Digital Marketing Solutions for Tomorrow', 'Our Talented & Experienced Marketing Agency', 'Create your own skin to match your brand']
+                text : ['Digital Marketing Solutions for Tomorrow','Our Talented & Experienced Marketing Agency','Create your own skin to match your brand']
             }
         }
     }

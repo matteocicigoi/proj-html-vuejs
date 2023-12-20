@@ -1,11 +1,11 @@
 <script>
 export default{
-    props : ['text']
+    props : ['text', 'big']
 };
 </script>
 
 <template>
-<div class="primary">
+<div class="primary" :class="{big : big === true}">
     <span>{{ text }}</span>
 </div>
 </template>
@@ -23,6 +23,9 @@ export default{
             border-radius: 20px;
             color: $textInteraction;
             font-size: 13px;
+        }
+        &.big {
+            padding: 10px 25px;
         }
     }
 </style>

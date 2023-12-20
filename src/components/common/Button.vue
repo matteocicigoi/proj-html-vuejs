@@ -1,11 +1,16 @@
 <script>
 export default {
-    props : ['text', 'class', 'icon']
+    props : ['text', 'class', 'icon', 'size'],
+    data() {
+        return {
+            classM : `${this.class} ${this.size !== undefined ? this.size : ''}`
+        }
+    }
 }
 </script>
 
 <template>
-    <button :class="class">{{ text }}
+    <button :class="classM">{{ text }}
         <font-awesome-icon v-if="icon !== 'false'" :icon="icon" />
     </button>
 </template>
@@ -43,6 +48,13 @@ export default {
                 background-color: $textInteraction;
                 color: $textHover;
             }
+        }
+        &.big {
+            margin-right: 0;
+            padding: 10px 0;
+            width: calc(100%);
+            display: block;
+            text-align: center;
         }
     }
 </style>
