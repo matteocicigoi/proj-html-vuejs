@@ -8,5 +8,7 @@ export default{
 </script>
 
 <template>
-<Jumbotron />
+    <main>
+        <Jumbotron />
+    </main>
 </template>

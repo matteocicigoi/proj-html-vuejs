@@ -1,15 +1,18 @@
 <script>
 import Badge from '../common/Badge.vue';
 import Button from '../common/Button.vue';
+import ListaImg from '../common/ListaImg.vue';
 export default{
     components: {
         Badge,
-        Button
+        Button,
+        ListaImg
     }
 };
 </script>
 
 <template>
+<!-- Jumbotron-->
 <div class="jumbotron">
     <div class="jumbotron-info">
         <div class="jumbotron-text">
@@ -24,7 +27,11 @@ export default{
             <img src="../../assets/img/about.png" alt="about">
         </div>
     </div>
+    <!-- Lista -->
+    <ListaImg :border="'top100'" :flex="true" :images="['amazon.svg', 'google.svg', 'lenovo.svg', 'paypal.svg', 'shopify.svg', 'spotify.svg']"/>
+    <!-- Fine Lista -->
 </div>
+<!-- Fine Jumbotron-->
 </template>
 
 <style scoped lang="scss">

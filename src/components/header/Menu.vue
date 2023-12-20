@@ -46,6 +46,10 @@ export default {}
             text-transform: uppercase;
             color: $textNav;
             font-size: 14px;
+            
+            &:hover {
+                color: $textInteraction;
+            }
 
             select {
                 text-transform: uppercase;

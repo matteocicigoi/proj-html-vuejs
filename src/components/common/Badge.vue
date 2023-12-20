@@ -23,11 +23,6 @@ export default{
             border-radius: 20px;
             color: $textInteraction;
             font-size: 13px;
-
-            &:hover{
-                background-color: $textInteraction;
-                color: $textHover;
-            }
         }
     }
 </style>

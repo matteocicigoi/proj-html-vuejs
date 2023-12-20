@@ -24,8 +24,10 @@ export default {
             padding-right: 20px;
 
             &:hover{
-                background-color: $textInteraction;
-                color: $textHover;
+                background-color: $textHover;
+                color: $textInteraction;
+                border: 1px solid $textInteraction;
+                box-shadow: none;
             }
         }
         &.secondary {
@@ -34,6 +36,11 @@ export default {
             border-radius: 5px;
             padding-left: 20px;
             padding-right: 20px;
+
+            &:hover{
+                background-color: $textInteraction;
+                color: $textHover;
+            }
         }
     }
 </style>
