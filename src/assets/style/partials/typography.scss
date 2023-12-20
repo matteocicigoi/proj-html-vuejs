@@ -1,5 +1,11 @@
 /* typography */
+@use '_variables.scss' as *;
 body {
     font-family: "Asap";
     font-weight: bold;
+}
+
+a {
+    color: $textInteraction;
+    text-decoration: none;
 }
