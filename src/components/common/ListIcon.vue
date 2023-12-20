@@ -19,6 +19,7 @@ export default {
 @use '../../assets/style/partials/_variables.scss' as *;
     ul {
         list-style-type: none;
+        margin-bottom: 23px;
         &.flex {
             display: flex;
             align-items: center;
@@ -26,6 +27,8 @@ export default {
 
         li {
             padding-right: 55px;
+            padding-top: 7px;
+            padding-bottom: 7px;
             color: $textInstallSecondary;
         }
 

@@ -1,18 +1,28 @@
 <script>
+import ListIcon from './ListIcon.vue';
+import Button from './Button.vue';
 export default {
-    props: ['border', 'icon', 'title', 'description', 'link']
+    components : {
+        ListIcon,
+        Button
+    },
+    props: ['border', 'icon', 'title', 'description', 'link', 'list', 'button', 'type']
 };
 </script>
 
 <template>
     <!-- Card -->
-    <div class="card" :class="{border : border === true}">
+    <div class="card" :class="{border : border === true, big :type === 'big'}">
         <div v-if="icon !== false" class="icon">
             <font-awesome-icon :icon="icon" />
         </div>
         <h3 v-if="title !== false" >{{  title }}</h3>
         <p v-if="description !== false">{{ description }}</p>
-        <a :href="link[0]">{{ link[1] }} <font-awesome-icon :icon="link[2]" /></a>
+        <ListIcon v-if="(typeof list) === 'object'" :list="list" />
+        <a v-if="button !== true" :href="link[0]">{{ link[1] }} <font-awesome-icon :icon="link[2]" /></a>
+        <template v-else>
+            <Button :text="link[1]" :class="'primary'" :icon="link[2]"/>
+        </template>
     </div>
     <!-- Fine Card -->
 </template>
@@ -52,6 +62,17 @@ export default {
             color: $textPrimary;
             line-height: 25px;
             margin-bottom: 20px;
+        }
+
+        &.big {
+            h3 {
+                font-size: 25px;
+                margin-right: 280px;
+                margin-bottom: 40px;
+            }
+            p {
+                margin-bottom: 15px;
+            }
         }
         
     }

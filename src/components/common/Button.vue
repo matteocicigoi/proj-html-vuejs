@@ -1,11 +1,13 @@
 <script>
 export default {
-    props : ['text', 'class']
+    props : ['text', 'class', 'icon']
 }
 </script>
 
 <template>
-    <button :class="class">{{ text }}</button>
+    <button :class="class">{{ text }}
+        <font-awesome-icon v-if="icon !== 'false'" :icon="icon" />
+    </button>
 </template>
 <style scoped lang="scss">
 @use '../../assets/style/partials/_variables.scss' as *;

@@ -38,14 +38,14 @@ export default {
 .install-info {
     width: 730px;
     margin: 0 auto;
-    margin-bottom: 110px;
+    margin-bottom: 87px;
     
     .install {
     background-color: $textNav;
     color: $textPrimary;
     padding: 25px;
     border-radius: 7px;
-    margin-bottom: 22px;
+    margin-bottom: 15px;
         
         ul {
             list-style-type: none;
