@@ -1,12 +1,13 @@
 <script>
 export default {
-    props: ['titolo', 'descrizione']
+    props: ['align', 'titolo', 'descrizione', 'info']
 };
 </script>
 
 <template>
     <!-- Info: Titolo - Descrizione -->
-    <div class="info">
+    <div class="info" :class="{center : align === 'center'}">
+        <h6 v-if="info !== false">{{ info }}</h6>
         <h2 v-if="titolo !== false">{{ titolo }}</h2>
         <p v-if="descrizione !== false" v-html="descrizione"></p>
     </div>
@@ -20,6 +21,11 @@ export default {
         margin-bottom: 70px;
         width: 600px;
 
+        &.center {
+            margin: 110px auto;
+            text-align: center;
+        }
+
         h2 {
             color: $textTitle;
             margin-bottom: 30px;
@@ -27,6 +33,12 @@ export default {
 
         p {
             color: $textPrimary;
+        }
+
+        h6 {
+            color: $textInteraction;
+            margin-bottom: 20px;
+            font-size: 15px;
         }
     }
 </style>

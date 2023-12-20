@@ -11,7 +11,7 @@ export default {
 <template>
     <div class="list" :class="{'features-list' : type === 'features'}">
         <article v-for="(element, index) in elements.title">
-            <CardType :border="true" :icon="'fa-brands fa-github'" :title="element" :descrition="elements.descrition[index]" :link="['#', elements.link[index], 'fa-solid fa-angle-right']" />
+            <CardType :border="true" :icon="'fa-brands fa-github'" :title="element" :description="elements.description[index]" :link="['#', elements.link[index], 'fa-solid fa-angle-right']" />
         </article>
     </div>
 </template>

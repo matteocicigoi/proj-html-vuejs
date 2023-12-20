@@ -1,6 +1,6 @@
 <script>
 export default {
-    props: ['border', 'icon', 'title', 'descrition', 'link']
+    props: ['border', 'icon', 'title', 'description', 'link']
 };
 </script>
 
@@ -11,7 +11,7 @@ export default {
             <font-awesome-icon :icon="icon" />
         </div>
         <h3 v-if="title !== false" >{{  title }}</h3>
-        <p v-if="descrition !== false">{{ descrition }}</p>
+        <p v-if="description !== false">{{ description }}</p>
         <a :href="link[0]">{{ link[1] }} <font-awesome-icon :icon="link[2]" /></a>
     </div>
     <!-- Fine Card -->

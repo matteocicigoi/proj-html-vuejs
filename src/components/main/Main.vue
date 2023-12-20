@@ -1,10 +1,12 @@
 <script>
 import Jumbotron from './Jumbotron.vue';
 import Features from './Features.vue';
+import QuickStart from './QuickStart.vue';
 export default{
     components: {
         Jumbotron,
-        Features
+        Features,
+        QuickStart
     }
 };
 </script>
@@ -14,6 +16,7 @@ export default{
         <Jumbotron />
         <div class="container">
             <Features />
+            <QuickStart />
         </div>
     </main>
 </template>

@@ -15,7 +15,7 @@ export default {
                     'Customizable',
                     'Scalable'
                 ],
-                descrition : [
+                description : [
                     'Composed in a pseudo-Latin language which more or less corresponds.',
                     'Composed in a pseudo-Latin language which more or less corresponds.',
                     'Composed in a pseudo-Latin language which more or less corresponds.',
@@ -39,9 +39,3 @@ export default {
         <CardList  :elements="features" :type="'features'"/>
     </div>
 </template>
-
-<style scoped lang="scss">
-
-    .features {
-    }
-</style>
