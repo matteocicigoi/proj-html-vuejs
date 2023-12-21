@@ -7,7 +7,7 @@ export default {
     data() {
         return {
             list : {
-                icon : 'fa-brands fa-github',
+                icon : 'fa-regular fa-circle-check',
                 text : ['Organize your data', 'Work with any team']
             }
         }

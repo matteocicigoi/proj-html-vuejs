@@ -11,7 +11,7 @@ export default {
     data() {
         return {
             list : {
-                icon : 'fa-brands fa-github',
+                icon : 'fa-regular fa-circle-check',
                 text : ['Digital Marketing Solutions for Tomorrow','Our Talented & Experienced Marketing Agency','Create your own skin to match your brand']
             }
         }
@@ -24,7 +24,7 @@ export default {
         <Info :info="'Quickstart'" :align="'center'" :titolo="'Awesome isn\'t it? Let\'s dive in!'" :descrizione="`Start working with <a href='#'>Landrick</a> that can provide everything you nees to generate awareness, drive traffic, connect.`"/>
         <Install />
         <div class="container">
-            <CardType :type="'big'" :button="true" :icon="false" :list="list" :title="'Build tools and extensive documention'" :description="'You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.'" :link="['#', 'Read More', 'fa-solid fa-angle-right']"/>
+            <CardType :type="'big'" :button="true" :icon="false" :listColor="'secondary'" :iconBt="'fa-brands fa-github'" :list="list" :title="'Build tools and extensive documention'" :description="'You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.'" :link="['#', 'Read More', 'fa-solid fa-angle-right']"/>
             <img src="../../assets/img/1.png" alt="img">
         </div>
     </div>

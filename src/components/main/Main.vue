@@ -3,12 +3,14 @@ import Jumbotron from './Jumbotron.vue';
 import Features from './Features.vue';
 import QuickStart from './QuickStart.vue';
 import Subscriptions from './Subscriptions.vue';
+import Contact from './Contact.vue';
 export default{
     components: {
         Jumbotron,
         Features,
         QuickStart,
-        Subscriptions
+        Subscriptions,
+        Contact
     }
 };
 </script>
@@ -20,6 +22,7 @@ export default{
             <Features />
             <QuickStart />
             <Subscriptions />
+            <Contact />
         </div>
     </main>
 </template>

@@ -26,6 +26,12 @@ export default {
                     'Read More',
                     'Read More',
                     'Read More'
+                ],
+                icon : [
+                    'fa-solid fa-layer-group',
+                    'fa-solid fa-tv',
+                    'fa-solid fa-gears',
+                    'fa-solid fa-maximize'
                 ]
             }
         }
@@ -36,6 +42,6 @@ export default {
 <template>
     <div class="features">
         <Info :titolo="'Key Features'" :descrizione="`Start working with <a href='#'>Landrick</a> that can provide everything you nees to generate awareness, drive traffic, connect.`"/>
-        <CardList  :elements="features" :type="'features'"/>
+        <CardList :icon="features.icon"  :elements="features" :type="'features'"/>
     </div>
 </template>

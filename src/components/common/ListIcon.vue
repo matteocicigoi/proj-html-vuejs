@@ -1,6 +1,6 @@
 <script>
 export default {
-    props : ['list', 'flex']
+    props : ['list', 'flex', 'listColor']
 };
 </script>
 
@@ -8,7 +8,7 @@ export default {
     <!-- Lista con le icone -->
     <ul :class="{flex : flex === true}">
         <li v-for="(element, index) in list.text">
-            <font-awesome-icon :icon="list.icon" />
+            <font-awesome-icon :icon="list.icon" :class="{secondary : listColor === 'secondary'}" />
             <span>{{ list.text[index] }}</span>
         </li>
     </ul>
@@ -30,6 +30,10 @@ export default {
             padding-top: 7px;
             padding-bottom: 7px;
             color: $textInstallSecondary;
+
+            .secondary {
+                color: $textInteraction;
+            }
         }
 
         span {

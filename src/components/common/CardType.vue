@@ -10,7 +10,7 @@ export default {
         Badge,
         Best
     },
-    props: ['border', 'icon', 'title', 'description', 'link', 'list', 'button', 'type', 'btSize', 'infoP', 'badge', 'best']
+    props: ['border', 'icon', 'title', 'description', 'link', 'list', 'button', 'type', 'btSize', 'infoP', 'badge', 'best', 'iconBt', 'listColor']
 };
 </script>
 
@@ -18,17 +18,18 @@ export default {
     <!-- Card -->
     <div class="card" :class="{border : border === true, big :type === 'big'}">
         <Best v-if="best === true" />
-        <div v-if="icon !== false" class="icon">
+        <div v-if="'string' === typeof icon" class="icon">
+            <div class="hidden"><font-awesome-icon :icon="icon" /></div>
             <font-awesome-icon :icon="icon" />
         </div>
         <Badge v-if="(typeof badge) === 'string'" :text="badge" :big="true"/>
         <h3 v-if="title !== false"  :class="{big : btSize === 'big'}">{{  title }}</h3>
         <p v-if="description !== false">{{ description }}</p>
         <hr v-if="infoP === true">
-        <ListIcon v-if="(typeof list) === 'object'" :list="list" />
-        <a v-if="button !== true" :href="link[0]">{{ link[1] }} <font-awesome-icon :icon="link[2]" /></a>
+        <ListIcon v-if="(typeof list) === 'object'" :list="list" :listColor="listColor" />
+        <a v-if="button !== true" :href="link[0]">{{ link[1] }} <font-awesome-icon :icon="'string' ===  typeof iconBt ? iconBt : link[2]" /></a>
         <template v-else>
-            <Button :text="link[1]" :class="'primary'"  :size="btSize" :icon="link[2]"/>
+            <Button :text="link[1]" :class="'primary'"  :size="btSize" :icon="'string' ===  typeof iconBt ? iconBt : link[2]"/>
         </template>
         <h6 v-if="infoP === true">*No credit card required</h6>
     </div>
@@ -40,6 +41,7 @@ export default {
 
     .card {
         margin-bottom:  25px;
+        position: relative;
 
         &.border {
             border: 1px solid $brCard;
@@ -54,6 +56,7 @@ export default {
             border-radius: 7px;
             font-size: 25px;
             color: $textInteraction;
+            z-index: 2;
         }
 
         a{
@@ -64,6 +67,7 @@ export default {
             margin-top: 30px;
             color: $textNav;
             margin-bottom: 15px;
+            z-index: 2;
             &.big {
                 font-size: 35px;
             }
@@ -97,6 +101,22 @@ export default {
                 margin-bottom: 15px;
             }
         }
+
+        .hidden {
+            display: none;
+            position: absolute;
+            z-index: -1;
+            top: calc(50% - 100px);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: $iconbgHover;
+            text-align: center;
+            font-size: 200px;
+        }
         
+        &:hover  .hidden{
+                display: block;
+            }
     }
 </style>

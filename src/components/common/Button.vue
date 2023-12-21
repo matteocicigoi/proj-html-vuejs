@@ -11,7 +11,7 @@ export default {
 
 <template>
     <button :class="classM">{{ text }}
-        <font-awesome-icon v-if="icon !== 'false'" :icon="icon" />
+        <font-awesome-icon v-if="'string' === ( typeof icon)" :icon="icon" />
     </button>
 </template>
 <style scoped lang="scss">
