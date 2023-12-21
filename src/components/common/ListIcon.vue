@@ -7,8 +7,8 @@ export default {
 <template>
     <!-- Lista con le icone -->
     <ul :class="{flex : flex === true}">
-        <li v-for="(element, index) in list.text">
-            <font-awesome-icon :icon="list.icon" :class="{secondary : listColor === 'secondary'}" />
+        <li v-for="(element, index) in list.text" :class="{pointer : listColor === 'none'}">
+            <font-awesome-icon :icon="list.icon" :class="{secondary : listColor === 'secondary', none : listColor === 'none'}" />
             <span>{{ list.text[index] }}</span>
         </li>
     </ul>
@@ -33,6 +33,12 @@ export default {
 
             .secondary {
                 color: $textInteraction;
+            }
+            .none {
+                color: $textFooter;
+            }
+            &.pointer {
+                cursor: pointer;
             }
         }
 

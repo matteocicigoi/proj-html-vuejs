@@ -17,6 +17,10 @@ import { faTv } from '@fortawesome/free-solid-svg-icons'
 import { faMaximize } from '@fortawesome/free-solid-svg-icons'
 import { faGears } from '@fortawesome/free-solid-svg-icons'
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons'
-library.add(faChevronDown, faGithub, faStackOverflow, faUser, faMagnifyingGlass, faAngleRight, faLayerGroup, faTv, faMaximize, faGears, faCircleCheck);
+import { faFacebookF} from '@fortawesome/free-brands-svg-icons'
+import { faInstagram} from '@fortawesome/free-brands-svg-icons'
+import { faTwitter} from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
+library.add(faChevronDown, faGithub, faStackOverflow, faUser, faMagnifyingGlass, faAngleRight, faLayerGroup, faTv, faMaximize, faGears, faCircleCheck, faFacebookF, faInstagram, faTwitter, faLinkedinIn);
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');

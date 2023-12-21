@@ -26,5 +26,19 @@ export default {
                 color: $textHover;
             }
         }
+
+        &.secondary {
+            border: 1px solid $brSubscriptions;
+            margin: 0 8px 0 0;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            text-align: center;
+
+            &:hover{
+                background-color: $textInteraction;
+                color: $textHover;
+            }
+        }
     }
 </style>
