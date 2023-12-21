@@ -7,11 +7,22 @@ export default {
         Menu,
         Logo,
         ButtonSm
+    },
+    data() {
+        return {
+            search : false
+        }
+    },
+    methods : {
+        searchFn(){
+            this.search = !this.search;
+        }
     }
 }
 </script>
 
 <template>
+    <!-- Header -->
     <header>
         <div class="nav">
             <div class="logo">
@@ -19,13 +30,19 @@ export default {
             </div>
             <Menu />
             <div class="profile-buttons">
-                <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="icon"/>
+                <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="icon" @click="searchFn"/>
                 <ButtonSm :class="'primary'" :icon="'fa-brands fa-github'"/>
                 <ButtonSm :class="'primary'" :icon="'fa-brands fa-stack-overflow'"/>
                 <ButtonSm :class="'primary'" :icon="'fa-regular fa-user'"/>
             </div>
         </div>
+        <!-- Ricerca -->
+        <div class="search" v-if="this.search === true"  @click="searchFn">
+            <input type="text" placeholder="Search"  @click.stop="" @keyup.enter="searchFn">    
+        </div>
+        <!-- Fine Ricerca -->
     </header>
+    <!-- Fine Header -->
 </template>
 
 <style scoped lang="scss">
@@ -57,6 +74,27 @@ header {
                 }
             }
         }
+    }
+    .search {
+        position: fixed;
+        top: 0;
+        padding: 100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 99;
+
+        input {
+            border-radius: 10px;
+            height: 50px;
+            width: 500px;
+            border: 1px solid $textInteraction;
+            padding-left: 30px;
+            font-size: 20px;
+            color: $textInteraction;
+        } 
     }
 }
 </style>

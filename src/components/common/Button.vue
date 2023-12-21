@@ -56,5 +56,23 @@ export default {
             display: block;
             text-align: center;
         }
+
+        &.footer {
+            border: 1px solid $btBrFooter;
+            color: $textInteraction;
+            background-color: $btBgFooter;
+            border-radius: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-shadow: -1px 3px 4px 0px $btBrFooter;
+            padding: 14px 0;
+            text-align: center;
+            margin: 0;
+            width: 100%;
+
+            &:hover{
+                background-color: $btBrFooter;
+            }
+        }
     }
 </style>

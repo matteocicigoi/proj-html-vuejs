@@ -12,7 +12,9 @@ export default{
 </script>
 
 <template>
+<!-- App -->
 <Header />
 <Main />
 <Footer />
+<!-- Fine App -->
 </template>

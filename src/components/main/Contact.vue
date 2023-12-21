@@ -5,18 +5,30 @@ export default {
     components : {
         Info,
         Button
+    },
+    data() {
+        return {
+            email : ''
+        }
+    },
+    methods : {
+        sendEmail(){
+            this.email = '';
+        }
     }
 }
 </script>
 
 <template>
+    <!-- Contact -->
     <div class="contact">
         <Info :align="'center'" :titolo="'Want to be among the first to find out?'" :descrizione="`Start working with <a href='#'>Landrick</a> that can provide everything you nees to generate awareness, drive traffic, connect.`"/>
         <div class="input">
-            <input type="email" placeholder="Email Address">
-            <Button :text="'Get Started'" :class="'primary'" :size="'big'" />
+            <input type="email" placeholder="Email Address" v-model="email">
+            <Button :text="'Get Started'" :class="'primary'" :size="'big'" @click="sendEmail()"/>
         </div>
     </div>
+    <!-- Fine Contact -->
 </template>
 
 <style scoped lang="scss">

@@ -27,7 +27,7 @@ export default {
             }
         }
 
-        &.secondary {
+        &.secondary, &.top {
             border: 1px solid $brSubscriptions;
             margin: 0 8px 0 0;
             width: 32px;
@@ -39,6 +39,15 @@ export default {
                 background-color: $textInteraction;
                 color: $textHover;
             }
+        }
+
+        &.top {
+            background-color: $btFooterTop;
+            border: 0;
+            margin: 0;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
         }
     }
 </style>

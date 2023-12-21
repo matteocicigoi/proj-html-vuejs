@@ -9,6 +9,7 @@ export default {
 </script>
 
 <template>
+    <!-- Lista card-->
     <div class="list" :class="{'features-list' : type === 'features', 'subscriptions-list' : type === 'subscriptions'}">
         <template v-if="type === 'features'">
             <article v-for="(element, index) in elements.title">
@@ -21,6 +22,7 @@ export default {
             </article>
         </template>
     </div>
+    <!-- Fine Lista card -->
 </template>
 
 <style scoped lang="scss">

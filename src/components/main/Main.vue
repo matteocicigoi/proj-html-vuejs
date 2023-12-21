@@ -16,6 +16,7 @@ export default{
 </script>
 
 <template>
+    <!-- Main -->
     <main>
         <Jumbotron />
         <div class="container">
@@ -25,6 +26,7 @@ export default{
             <Contact />
         </div>
     </main>
+    <!-- Fine Main -->
 </template>
 
 <style scoped lang="scss">

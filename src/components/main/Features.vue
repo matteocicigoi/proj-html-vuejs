@@ -40,8 +40,10 @@ export default {
 </script>
 
 <template>
+    <!-- Funzionalità -->
     <div class="features">
         <Info :titolo="'Key Features'" :descrizione="`Start working with <a href='#'>Landrick</a> that can provide everything you nees to generate awareness, drive traffic, connect.`"/>
         <CardList :icon="features.icon"  :elements="features" :type="'features'"/>
     </div>
+    <!-- Fine Funzionalità -->
 </template>

@@ -20,14 +20,16 @@ export default {
 </script>
 
 <template>
+    <!-- Quickstart -->
     <div class="quickstart">
         <Info :info="'Quickstart'" :align="'center'" :titolo="'Awesome isn\'t it? Let\'s dive in!'" :descrizione="`Start working with <a href='#'>Landrick</a> that can provide everything you nees to generate awareness, drive traffic, connect.`"/>
         <Install />
         <div class="container">
-            <CardType :type="'big'" :button="true" :icon="false" :listColor="'secondary'" :iconBt="'fa-brands fa-github'" :list="list" :title="'Build tools and extensive documention'" :description="'You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.'" :link="['#', 'Read More', 'fa-solid fa-angle-right']"/>
+            <CardType :type="'big'" :button="true" :icon="false" :listColor="'secondary'" :iconBt="'fa-solid fa-angle-right'" :list="list" :title="'Build tools and extensive documention'" :description="'You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.'" :link="['#', 'Read More', 'fa-solid fa-angle-right']"/>
             <img src="../../assets/img/1.png" alt="img">
         </div>
     </div>
+    <!-- Fine Quickstart -->
 </template>
 
 <style scoped lang="scss">

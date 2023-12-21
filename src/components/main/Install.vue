@@ -6,10 +6,22 @@ export default {
     },
     data() {
         return {
+            current: 0,
             list : {
                 icon : 'fa-regular fa-circle-check',
                 text : ['Organize your data', 'Work with any team']
-            }
+            },
+            installText : [
+                '<span style="color: #2ECA8B;">$ </span>npm install <span style="color: #2ECA8B;">-g </span>claps.js',
+                '<span style="color: #2ECA8B;">$ </span>nuget install <span style="color: #2ECA8B;">-g </span>claps.js',
+                '<span style="color: #2ECA8B;">$ </span>spm install <span style="color: #2ECA8B;">-g </span>claps.js',
+                '<span style="color: #2ECA8B;">$ </span>git <span style="color: #2ECA8B;">clone</span> https://landrick.com/claps.js'
+            ]
+        }
+    },
+    methods : {
+        currentFn(i){
+            this.current = i;
         }
     }
 };
@@ -20,12 +32,12 @@ export default {
     <div class="install-info">
         <div class="install">
             <ul>
-                <li class="selected">npm</li>
-                <li>nuget</li>
-                <li>spm</li>
-                <li>github</li>
+                <li :class="{selected : current === 0}" @click="currentFn(0)">npm</li>
+                <li :class="{selected : current === 1}" @click="currentFn(1)">nuget</li>
+                <li :class="{selected : current === 2}" @click="currentFn(2)">spm</li>
+                <li :class="{selected : current === 3}" @click="currentFn(3)">github</li>
             </ul>
-            <h3><span>$ </span>npm install <span>-g </span>claps.js</h3>
+            <h3 v-html="installText[current]"></h3>
         </div>
         <ListIcon :list="list" :flex="true"/>
     </div>
@@ -46,6 +58,7 @@ export default {
     padding: 25px;
     border-radius: 7px;
     margin-bottom: 15px;
+    width: max-content;
         
         ul {
             list-style-type: none;

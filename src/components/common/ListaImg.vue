@@ -1,17 +1,19 @@
 <script>
 export default{
-    props : ['flex', 'images', 'border']
+    props : ['flex', 'images', 'border', 'classT']
 };
 </script>
 
 <template>
-    <div :class="{top100 : border === 'top100'}">
-        <ul :class="{flex : flex === true}">
+    <!-- Lista di immagini -->
+    <div :class="{top100 : border === 'top100', payament : classT === 'payament'}">
+        <ul :class="{flex : flex === true, payament : classT === 'payament'}">
             <li v-for="img in images">
                 <img :src="`/img/${img}`" alt="sponsor">
             </li>
         </ul>
     </div>
+    <!-- Fine Lista di immagini -->
 </template>
 
 <style scoped lang="scss">
@@ -34,10 +36,21 @@ div{
             margin-top: 50px;
             margin-bottom: 40px;
         }
+
+        &.payament {
+            width: 100%;
+            img {
+                width: 37px;
+                margin: 0;
+            }
+        }
     }
-    &.top100{
+    &.top100 {
         width: 100%;
         border-top: 1px solid $brJumbo;
+    }
+    &.payament {
+        margin: 0;
     }
 }
 </style>

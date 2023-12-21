@@ -27,9 +27,7 @@ export default{
             <img src="../../assets/img/about.png" alt="about">
         </div>
     </div>
-    <!-- Lista -->
     <ListaImg :border="'top100'" :flex="true" :images="['amazon.svg', 'google.svg', 'lenovo.svg', 'paypal.svg', 'shopify.svg', 'spotify.svg']"/>
-    <!-- Fine Lista -->
 </div>
 <!-- Fine Jumbotron-->
 </template>

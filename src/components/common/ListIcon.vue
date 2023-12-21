@@ -39,6 +39,10 @@ export default {
             }
             &.pointer {
                 cursor: pointer;
+
+                &:hover span{
+                    color: $textInteraction;
+                }
             }
         }
 

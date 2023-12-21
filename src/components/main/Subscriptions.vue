@@ -72,8 +72,10 @@ export default {
 </script>
 
 <template>
-    <div class="quickstart">
+    <!-- Abbonamenti -->
+    <div class="subscriptions">
         <Info :align="'center'" :titolo="'Our rates for developer from landrick team'" :descrizione="`Start working with <a href='#'>Landrick</a> that can provide everything you nees to generate awareness, drive traffic, connect.`"/>
         <CardList  :elements="subscriptions" :type="'subscriptions'" :listColor="'secondary'"/>
     </div>
+    <!-- Fine Abbonamenti -->
 </template>
