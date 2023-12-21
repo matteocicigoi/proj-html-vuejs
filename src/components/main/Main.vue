@@ -32,5 +32,6 @@ export default{
     .container{
         width: $sizeContainer;
         margin: 0 auto;
+        margin-bottom: 120px;
     }
 </style>
